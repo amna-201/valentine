@@ -1,0 +1,118 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fce4ec;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+
+.jar-container {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(75, 73, 73, 0.7);
+    border-radius: 20px 20px 30px 30px;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.jar-lid {
+    position: relative;
+    top: 0px;
+    left: 0;
+    width: 200px;
+    height: 60px;
+    background: repeating-linear-gradient(45deg, #d2a8a1, #b58375 10px, #d2a8a1 20px);
+    border: #4b4949 4px solid;
+    border-radius: 30px 30px 10px 10px ;
+    z-index: 2;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.heart {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: var(--color);
+    clip-path: polygon(50% 15%, 61% 5%, 75% 5%, 85% 15%, 85% 30%, 50% 60%, 15% 30%, 15% 15%, 25% 5%, 39% 5%);
+    transition: transform 0.8s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d81b60;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.message-box {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(0);
+border: 6px solid #630326;
+padding: 80px 0;
+font-size: 10px;
+font-family: sans-serif;
+font-weight:bolder;
+color: #630326;
+line-height: 1.4;
+transition: transform 0.5s ease-in-out;
+box-sizing: border-box;
+width: 650px;
+height: 550px;
+display: flex;
+justify-content: center;
+align-items: start;
+background-color: white;
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+z-index: 10;
+clip-path: polygon(50% 15%, 61% 5%, 75% 5%, 85% 15%, 85% 30%, 50% 60%, 15% 30%, 15% 15%, 25% 5%, 39% 5%);
+}
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 9;
+}
+
+.show-message-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.show-message-btn:hover {
+    background-color: #ad1457;
+}
