@@ -63,8 +63,8 @@ function showHeartMessage() {
     messageBox.innerText = messages[index];
     messageBox.style.display = "flex";
     messageBox.style.border="4px solid "
-    messageBox.style.width = "600px";  
-    messageBox.style.height = "550px";  
+    messageBox.style.width = "500px";  
+    messageBox.style.height = "500px";  
     messageBox.style.transform = "translate(-50%, -50%) scale(1)";
 
     setTimeout(() => {
