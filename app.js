@@ -63,14 +63,14 @@ function showHeartMessage() {
     messageBox.innerText = messages[index];
     messageBox.style.display = "flex";
     messageBox.style.border="4px solid "
-    messageBox.style.width = "300px";  
-    messageBox.style.height = "350px";  
+    messageBox.style.width = "600px";  
+    messageBox.style.height = "550px";  
     messageBox.style.transform = "translate(-50%, -50%) scale(1)";
 
     setTimeout(() => {
         messageBox.style.transform = "translate(-50%, -50%) scale(0)";
         resetHearts();
-    }, 15000);
+    }, 150000);
 }
 
 function resetHearts() {
